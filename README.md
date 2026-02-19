@@ -181,36 +181,44 @@ Scholar Sync uses a **content-based similarity approach**:
 ## 📁 Project Structure
 
 ```
-Scholar Sync/
+Scholar-Sync/
 │
-├── public/
-│   └── index.html
+├── backend/
+│   ├── server.js
+│   └── ...
 │
-├── src/
-│   ├── components/
-│   │   ├── AIChat.jsx
-│   │   ├── AIWidget.jsx
-│   │   ├── Chat.jsx
-│   │   ├── GroupChat.jsx
-│   │   ├── Navbar.jsx
-│   │   └── ProtectedRoute.jsx
+├── frontend/
+│   ├── public/
+│   │   └── index.html
 │   │
-│   ├── pages/
-│   │   ├── LandingPage.jsx
-│   │   ├── Login.jsx
-│   │   ├── SignUp.jsx
-│   │   ├── Dashboard.jsx
-│   │   ├── Profile.jsx
-│   │   ├── Groups.jsx
-│   │   └── SkillMatch.jsx
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── AIChat.jsx
+│   │   │   ├── AIWidget.jsx
+│   │   │   ├── Chat.jsx
+│   │   │   ├── GroupChat.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── LandingPage.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── SignUp.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   ├── Groups.jsx
+│   │   │   └── SkillMatch.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── socketService.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
 │   │
-│   ├── services/
-│   │   └── socketService.jsx
-│   │
-│   ├── App.jsx
-│   └── main.jsx
+│   └── package.json
 │
 └── README.md
+
 ```
 
 ---
@@ -306,9 +314,13 @@ VITE_SOCKET_URL=http://localhost:5000
 ## 👨‍💻 Contributors
 
 -N.Siri Lasya Priya-[nsiri369](https://github.com/nsiri369)
+
 -K.Deekshitha - [Deekshitha Kammela](https://github.com/Deekshithaa-06 )
+
 -K.Lalitha Sri-[K.Lalitha sri](https://github.com/Lalitha-2006 )
+
 -K.Venkata Naga Sowmya-[SowmyaKurapati26](https://github.com/SowmyaKurapati26 )
+
 -K.Revathi-[K.Revathi](https://github.com/Deekshithaa-06 )
 
 

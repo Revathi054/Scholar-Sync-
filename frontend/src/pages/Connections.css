@@ -1,0 +1,107 @@
+.connections-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.connections-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.connection-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.connection-card:hover {
+  transform: translateY(-2px);
+}
+
+.connection-card .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.connection-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 18px;
+}
+
+.connection-card p {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.connection-card .actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.connection-card .view-btn,
+.connection-card .message-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.connection-card .view-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.connection-card .message-btn {
+  background: #667eea;
+  color: white;
+}
+
+.connection-card .connect-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.connection-card.suggested {
+  border: 2px solid #28a745;
+}

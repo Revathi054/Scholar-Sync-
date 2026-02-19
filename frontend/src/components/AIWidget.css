@@ -1,0 +1,67 @@
+/* AI Widget styles - professional, fixed-size, stable */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+.ai-widget {
+  position: fixed;
+  right: 20px; /* Match previous inline style */
+  bottom: 20px; /* Match previous inline style */
+  z-index: 9999;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  /* Define widget size variables here for consistency - Increased width */
+  --ai-widget-width: 420px; /* Increased fixed width for the chat panel */
+  --ai-widget-height: 500px; /* Fixed height for the chat panel */
+  --ai-muted: #6b7280; /* Define muted color */
+}
+
+.ai-toggle-btn {
+  width: 56px; /* Match previous inline style */
+  height: 56px; /* Match previous inline style */
+  border-radius: 50%; /* Match previous inline style */
+  background-color: #2563eb; /* Match previous inline style */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* Match previous inline style */
+  border: none; /* Ensure no default button border */
+  color: white; /* For the 🤖 emoji */
+  font-size: 24px; /* Adjust emoji size */
+  z-index: 9999; /* Ensure button is above other content */
+}
+
+.ai-widget-panel {
+  position: absolute; /* Position relative to .ai-widget */
+  bottom: 76px; /* 20px (button bottom) + 56px (button height) = 76px */
+  right: 0; /* Align with the button */
+  width: var(--ai-widget-width);
+  height: var(--ai-widget-height);
+  background: var(--ai-bg);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  z-index: 2001;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ai-widget-panel.open { display: flex; }
+
+/* ensure consistent box-sizing */
+.ai-widget-panel, .ai-widget-panel * { box-sizing: border-box; }
+
+/* Make sure widget stays fixed size on small screens */
+@media (max-width: 480px) {
+  .ai-widget {
+    right: 10px;
+    bottom: 10px;
+  }
+  .ai-widget-panel {
+    width: calc(100vw - 20px); /* Full width minus padding */
+    height: calc(100vh - 100px); /* Full height minus button and some margin for mobile */
+    bottom: 76px; /* Adjust based on button position */
+    right: 0;
+  }
+  .ai-toggle-btn {
+    width: 50px;
+    height: 50px;
+  }
+}

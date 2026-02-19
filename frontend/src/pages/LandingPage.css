@@ -1,0 +1,23 @@
+/* src/pages/LandingPage.css */
+
+.landing-container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #6c2bd9; /* purple */
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 25px;
+}

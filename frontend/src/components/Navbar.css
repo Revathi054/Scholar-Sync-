@@ -1,0 +1,113 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  height: 60px;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #4f46e5;
+}
+.logo span {
+  color: #9333ea; 
+}
+
+/* Center nav */
+.navbar-center {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 6px;
+  color: black;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+  color: black;
+}
+
+.nav-link.active {
+  background: #111827;
+  color: #fff;
+}
+
+/* Right Side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  color: black;
+  background-color: #4f46e5;
+}
+
+.signup-btn {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(90deg, #4338ca, #7e22ce);
+}

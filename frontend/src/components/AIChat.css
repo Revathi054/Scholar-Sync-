@@ -1,0 +1,160 @@
+/* AIChat.css removed — file intentionally left blank to indicate removal. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.ai-chat-container {
+  /* This class might be for a wrapper, AIChat.jsx uses ai-chat-card */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ai-chat-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px; /* Match previous inline style */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Match previous inline style */
+  overflow: hidden; /* Match previous inline style */
+  font-family: inherit; /* Inherit from AIWidget.css */
+  border: 1px solid #e5e7eb; /* Match previous inline style */
+}
+
+.ai-chat-header {
+  background-color: #2563eb; /* Match previous inline style */
+  color: white; /* Match previous inline style */
+  padding: 16px; /* Match previous inline style */
+  font-weight: bold; /* Match previous inline style */
+  font-size: 1.1rem; /* Match previous inline style */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.ai-messages {
+  flex: 1; /* Match previous inline style */
+  padding: 16px; /* Match previous inline style */
+  overflow-y: auto; /* Match previous inline style */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Match previous inline style */
+  background-color: #f9fafb; /* Match previous inline style */
+}
+
+.ai-message { display: flex; gap: 8px; align-items: flex-start; }
+.ai-message.user { justify-content: flex-end; }
+.ai-message.user .ai-avatar { order: 2; } /* Move avatar to the right for user messages */
+.ai-message.user .ai-message-body { order: 1; } /* Move message body to the left for user messages */
+
+.ai-avatar { width: 32px; height: 32px; border-radius: 50%; background-color: #e0e7ff; color: #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600; flex-shrink: 0; }
+.ai-message.user .ai-avatar { background-color: #2563eb; color: white; }
+
+.ai-message-body { max-width: 75%; display: flex; flex-direction: column; }
+.ai-message-content { padding: 10px 14px; border-radius: 12px; word-break: break-word; white-space: pre-wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.ai-message.user .ai-message-content { background-color: #2563eb; color: white; }
+.ai-message.assistant .ai-message-content { background-color: white; border: 1px solid #e5e7eb; color: #1f2937; }
+
+.ai-error-display {
+  padding: 10px 16px;
+  background-color: #fee2e2; /* Red background for errors */
+  color: #dc2626; /* Darker red text */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  border-top: 1px solid #fca5a5;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.ai-input-row {
+  padding: 16px; /* Match previous inline style */
+  border-top: 1px solid #e5e7eb; /* Match previous inline style */
+  display: flex;
+  gap: 8px;
+  background-color: white; /* Match previous inline style */
+  align-items: center;
+}
+.ai-chat-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 1rem; /* Adjust for better readability */
+}
+.ai-send-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px; /* Adjusted padding */
+  cursor: pointer;
+  font-size: 1rem; /* Adjust for better readability */
+  transition: background-color 0.2s ease;
+}
+.ai-send-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.clear-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 10px 8px; /* Adjusted padding */
+}
+.clear-btn:hover {
+  color: #374151;
+}
+
+/* Loading Spinner */
+.ai-message-content .spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ai-message.assistant .ai-message-content .spinner {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-top-color: #2563eb;
+}
+
+
+/* Styling for the login prompt when not logged in */
+.ai-login-prompt {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f0f4f8;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.95rem;
+  display: flex; /* To center the link */
+  justify-content: center;
+}
+
+/* Accessibility: make sure sizes are stable and no font-size animations */
+* { transition: none !important; }
